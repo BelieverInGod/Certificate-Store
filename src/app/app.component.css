@@ -1,0 +1,55 @@
+.flexBox {
+    position: relative;
+    background: #a19592c0;
+    margin-top: 50px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px 10px rgba(0,0,0,0.75);
+    border-radius: 5px solid black;
+    margin-inline: 15%;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.InfoContainer {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-inline: 10%;
+    width: 80%;
+    height: 100px;
+    background: #302d2df1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.InfoContainer h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 400%;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 400px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.inputLimit {
+    margin: 25px;
+}
+
+.inputBreed  {
+    margin: 25px;
+}
+

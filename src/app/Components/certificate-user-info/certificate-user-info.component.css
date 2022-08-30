@@ -1,0 +1,26 @@
+.certificateInfo {
+    margin: 50px;
+    margin-left: 100px;
+    background: white;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    min-width: 300px;
+    border-radius: 15px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.onStart {
+    margin-top: 10px;
+    font-family: roboto, sans-serif;
+    font-size: 16px;
+    display: flex;
+}
+
+.focus {
+    border: dashed rgba(0, 0, 0, 0.5);
+}

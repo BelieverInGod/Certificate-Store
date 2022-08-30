@@ -1,0 +1,8 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+     font-family: message-box, sans-serif; font-size: 50px ;
+     background-image: url(./app/decoration/paper.jpg);
+     background-size: 100%;
+     background-attachment: fixed; 
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
