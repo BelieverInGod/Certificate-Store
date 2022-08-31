@@ -28,18 +28,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.setLimit()
-    // this.setValue()
   }
   
   onToggleBtn(count:number) {
     this.flagActiveInfo = count
-    console.log(this.flagActiveInfo)
+    this.currentId = 0
   }
 
   getIdClick(id:number) {
     this.currentId = id
-    console.log(this.currentId)
   }
 
   // setLimit(prevLimit: string = '') {

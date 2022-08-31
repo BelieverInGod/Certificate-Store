@@ -1,5 +1,5 @@
 <div class="certificateInfo" [ngClass]="flagActiveInfo ? 'focus' : 'certificateInfo'">
-  <div class="textCenter">
+  <div class="textCenter" [ngClass]="currentId === 0 ? 'active' : 'unActive'">
     <p class="onStart" [ngClass]="flagActiveInfo ? 'unActive' : 'active'">Виберіть сертифікат, щоб переглянути
       інформацію</p>
     <p class="onStart" [ngClass]="flagActiveInfo ? 'active' : 'onStart'">Перетягніть файл сертифіката у поле</p>

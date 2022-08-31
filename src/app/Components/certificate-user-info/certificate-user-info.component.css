@@ -20,7 +20,7 @@
 }
 
 .onStart {
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: roboto, sans-serif;
   font-size: 16px;
   display: none;
@@ -44,4 +44,5 @@
   margin-left: 20px;
   font-family: roboto, sans-serif;
   font-size: 16px;
+  margin-top: 20px;
 }
