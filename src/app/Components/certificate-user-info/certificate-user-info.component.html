@@ -1,5 +1,6 @@
 <div class="certificateInfo" [ngClass]="flagActiveInfo ? 'focus' : 'certificateInfo'">
   <div class="textCenter" [ngClass]="currentId === 0 ? 'active' : 'unActive'">
+    <input type="file" (getFile)="getFile($event)">
     <p class="onStart" [ngClass]="flagActiveInfo ? 'unActive' : 'active'">Виберіть сертифікат, щоб переглянути
       інформацію</p>
     <p class="onStart" [ngClass]="flagActiveInfo ? 'active' : 'onStart'">Перетягніть файл сертифіката у поле</p>
