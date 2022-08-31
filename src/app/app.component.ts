@@ -1,16 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
+export interface Users {
+  name: string,
+  id: number,
+  CN: string,
+  Form: string,
+  Till: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  // catsList: any;
-  // value: any;
-  // limit: any;
-  // pagination = 1
+  public users: Users[] = [
+    {name: "Іванов Іван Іваонович", id: 1, CN: 'АЦСК MASTERKEY', Form: '2016-12-18', Till: '2017-12-18'},
+    {name: "Петров Петро Петрович", id: 2, CN: 'ЦСК ПрАТ "ІВК"', Form: '2016-09-06', Till: '2017-09-06'},
+    {name: 'Дмитров Дмитро Дмитрович', id: 3, CN: 'КНЕДП ІДД ДПС', Form: '2017-03-25', Till: '2018-03-25'}
+  ];
+  public flagActiveInfo: number = 0;
+  public currentId: number = 0
 
   constructor(private http: HttpClient) {
 
@@ -19,6 +30,16 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // this.setLimit()
     // this.setValue()
+  }
+  
+  onToggleBtn(count:number) {
+    this.flagActiveInfo = count
+    console.log(this.flagActiveInfo)
+  }
+
+  getIdClick(id:number) {
+    this.currentId = id
+    console.log(this.currentId)
   }
 
   // setLimit(prevLimit: string = '') {

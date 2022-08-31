@@ -1,4 +1,15 @@
-<div class="certificateInfo" >
-    <p class="onStart">Виберіть сертифікат, щоб переглянути інформацію</p>
+<div class="certificateInfo" [ngClass]="flagActiveInfo ? 'focus' : 'certificateInfo'">
+  <div class="textCenter">
+    <p class="onStart" [ngClass]="flagActiveInfo ? 'unActive' : 'active'">Виберіть сертифікат, щоб переглянути
+      інформацію</p>
+    <p class="onStart" [ngClass]="flagActiveInfo ? 'active' : 'onStart'">Перетягніть файл сертифіката у поле</p>
+  </div>
+  <div class="userInfoContainer" *ngFor="let user of users">
+    <p class="infoText" *ngIf="currentId === user.id">
+      <span>Common name: {{user.name}}</span>
+      <span>Issuer CN: {{user.CN}}</span>
+      <span>Valid Form: {{user.Form}}</span>
+      <span>Valid Till: {{user.Till}}</span>
+    </p>
+  </div>
 </div>
-

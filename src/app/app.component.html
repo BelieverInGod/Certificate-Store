@@ -1,11 +1,15 @@
 <!-- User name: <input type="text" [(ngModel)]="userName"> -->
 
 <div class="flexBox">
-  <div class="InfoContainer"><h1>Certificate Store</h1></div>
+  <div class="InfoContainer">
+    <h1>Certificate Store</h1>
+  </div>
   <div class="inputContainer">
 
-    <app-certificate-user-list class="UserList"></app-certificate-user-list>
-    <app-certificate-user-info ></app-certificate-user-info>
+    <app-certificate-user-list [users]="users" (onToggleBtn)="onToggleBtn($event)" (getIdClick)="getIdClick($event)">
+    </app-certificate-user-list>
+    <app-certificate-user-info [users]="users" [currentId]="currentId" [flagActiveInfo]="flagActiveInfo">
+    </app-certificate-user-info>
 
   </div>
 </div>

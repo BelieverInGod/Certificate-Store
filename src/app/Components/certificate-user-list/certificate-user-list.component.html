@@ -1,10 +1,8 @@
 <div class="userListContainer">
-    <div class="user">
-        <span class="userName">Olexiy Olexiy Olexiyovich</span>
-    </div>
-    <div class="user">
-        <span class="userName">good</span>
-    </div>
-    
-    <button class="btn" (click)="arrCount()" >{{btnContent[count]}}</button>
+  <div class="user" *ngFor="let user of users" [ngClass]="curentId === user.id ? 'active' : 'user'">
+    <span class="userName" (click)="getId(user.id)">{{user.name}}</span>
+  </div>
+
+
+  <button class="btn" (click)="clickBtnTitle()">{{btnContent[count]}}</button>
 </div>
