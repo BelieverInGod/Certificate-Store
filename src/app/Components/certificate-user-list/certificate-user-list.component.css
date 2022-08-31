@@ -44,7 +44,7 @@
   transition: 0.5s;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   font-size: 20px;
-  bottom: -60px;
+  bottom: 0px;
 }
 
 .btn:hover {
