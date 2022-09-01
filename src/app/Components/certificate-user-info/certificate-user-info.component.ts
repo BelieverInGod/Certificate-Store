@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as e from 'express';
 import { Users } from 'src/app/app.component';
 
 
@@ -15,7 +16,8 @@ export class CertificateUserInfoComponent implements OnInit {
   Hex = require('@lapo/asn1js/hex');
   file:any
   result:any
-  baseString:any
+  baseString: any
+  reader = new FileReader();
   
   constructor() { }
 
@@ -25,24 +27,38 @@ export class CertificateUserInfoComponent implements OnInit {
   getFile(event:any) {
     this.file = event.target.files[0]
     console.log(this.file)
-    this.baseString = this.getBase64(event.target.files[0])
-
-    this.result = this.ASN1.decode(this.Hex.decode(this.baseString)).content();
-    console.log(this.result)
+    this.baseString = this.getBase64(this.file)
+    // console.log(this.baseString)
+    // this.result = this.ASN1.decode(this.Hex.decode(this.baseString)).content();
+    // console.log(this.result)
+ 
   }
 
+  // parseData() {
+  //   this.result = this.ASN1.decode(this.Hex.decode(this.baseString.split(',')[1])).content();
+  //   console.log(this.result)
+  // }
+
   getBase64(file:any) {
-    let reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = function () {
-      console.log(reader.result);
-    };
-    reader.onerror = function (error) {
+    // function a () {
+    //   console.log(th);
+    // }
+    this.reader.readAsDataURL(file);
+    this.reader.onload = this.getData
+    this.reader.onerror = function (error) {
       console.log('Error: ', error);
     };
+    this.getData.apply(this.baseString)
+
+    console.log(this.reader.result)
+
  }
 
- 
-  
+getData () {
+  // this.baseString = reader.result
+  console.log(this)
+  console.log(arguments[0])
+  // return this.baseString
+  }
 
 }
